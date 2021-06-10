@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Srisakdi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Autour+One&family=Srisakdi&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(#de5cff 1%, #518eff 100%);
+}
+
+
+
+.wrapper {
+    width: 400px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.1);
+    transition: all 1s ease-in;
+}
+
+.wrapper  header {
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    height: 55px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+}
+
+.wrapper  header label {
+    z-index: 2;
+    height: 100%;
+    width: 30%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 18px;
+    cursor: pointer;
+    /* border: 1px solid red; */
+    transition: all 0.3s ease;
+}
+
+.wrapper  header label:nth-child(2) {
+    width: 40%;
+}
+
+.wrapper  header .slider {
+    position: absolute;
+    height: 85%;
+    /* left: 50%; */
+    /* width: 120px; */
+    /* background: red; */
+    border-radius: inherit;
+    /* transform: translate(-50%); */
+    background: linear-gradient(145deg, #de5cff 1%, #518eff 100%);
+    transition: all 0.3s ease;
+}
+
+#tab_1:checked ~ header .slider{
+    left: 0%;
+    width: 90px;
+    transform: translate(5%);
+}
+
+#tab_2:checked ~ header .slider{
+    left: 50%;
+    width: 120px;
+    transform: translate(-50%);
+}
+
+#tab_3:checked ~ header .slider{
+    left: 100%;
+    width: 90px;
+    transform: translate(-105%);
+}
+
+.wrapper input[type="radio"] {
+    display: none;
+}
+
+.card_area .card .row .princing_details {
+    margin: 20px 0;
+    text-align: center;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.card_area .card .row .princing_details span {
+    font-size: 65px;
+    font-weight: 600;
+    font-family: 'Noto Sans';
+    position: relative;
+}
+
+.card_area .card .row .princing_details span::before,
+.card_area .card .row .princing_details span::after {
+    position: absolute;
+    font-weight: 400;
+    font-family: monospace;
+        
+}
+
+.card_area .card .row .princing_details span::before {
+    content: "$";
+    font-size: 20px;
+    left: -13px;
+    top: 17px;
+}
+
+.card_area .card .row .princing_details span::after {
+    content: "/mon";
+    font-size: 13px;
+    right: -33px;
+    bottom: 17px;
+}
+
+.card_area .card .row .princing_details p {
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.card_area .card .features li {
+    display: flex;
+    font-size: 15px;
+    margin-bottom: 10px;
+    /* list-style: none; */
+    /* background-color: lavender; */
+}
+
+.card_area .card .features li i {
+    color: #518eff;
+}
+
+.card_area .card .features li span {
+    margin-left: 10px;
+}
+
+.wrapper button {
+    height: 55px;
+    width: 100%;
+    margin-right: 20px;
+    border: none;
+    outline: none;
+    color: #000;
+    font-size: 18px;
+    font-family: 'Autour One', cursive;
+    border-radius: 30px;
+    cursor: pointer;
+    background: linear-gradient(145deg, #de5cff 1%, #518eff 100%);
+    transition: transform 0.3s ease;
+}
+
+.wrapper button:hover {
+    transform: scale(0.95);
+}
+
+.card_area {
+    overflow: hidden;
+}
+
+.card_area .card {
+    width: 300%;
+    display: flex;
+}
+
+.card_area .card  .row {
+    width: 33.4%;
+}
+
+.card .row_1 {
+    transition: all 0.3s ease;
+}
+
+#tab_1:checked ~ .card_area .card .row_1{
+    margin-left: 0%;
+}
+
+#tab_2:checked ~ .card_area .card .row_1{
+    margin-left: -33.4%;
+}
+
+#tab_3:checked ~ .card_area .card .row_1{
+    margin-left: -66.8%;
+}
+
